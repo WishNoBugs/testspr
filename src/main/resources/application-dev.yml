@@ -1,0 +1,30 @@
+spring:
+  redis:
+    redisson:
+      config: |
+        singleServerConfig:
+          address: "redis://47.102.216.120:6379"
+          password: 1q2w3e
+          database: 0
+          connectionMinimumIdleSize: 1
+          connectionPoolSize: 1
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://47.102.216.120:3306/study?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&allowMultiQueries=true&tinyInt1isBit=false
+    username: root
+    password: 1q2w3e
+    druid:
+      initial-size: 1
+      min-idle: 1
+      max-active: 10
+      driverClassName: com.mysql.cj.jdbc.Driver
+  mail:
+    host: imap.163.com
+    username: 15201422680@163.com
+    password: Zhou_sy001
+    port: 465
+    default-encoding: UTF-8
+mybatis-plus:
+  configuration:
+    #这个配置会将执行的sql打印出来，在开发或测试的时候可以用
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl

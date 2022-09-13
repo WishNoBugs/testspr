@@ -1,0 +1,17 @@
+spring:
+  profiles:
+    active: dev
+
+server:
+  port: 8080
+  servlet:
+    context-path: /spr
+
+
+mybatis-plus:
+  global-config:
+    db-config:
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+      logic-delete-field: "isDeleted"
+      id-type: auto
