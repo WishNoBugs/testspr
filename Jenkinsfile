@@ -13,7 +13,7 @@ pipeline {
       stage('拉取代吗') {
         steps {
           echo 'start poll source form gitlab'
-           git(poll: true, url: 'http://github.com/WishNoBugs/testspr.git', branch: 'develop', changelog: true, credentialsId: 'cf40d121-9530-4f0a-bfe4-cd801d386499')
+           git(poll: true, url: 'http://github.com/WishNoBugs/testspr.git', branch: 'master', changelog: true, credentialsId: 'cf40d121-9530-4f0a-bfe4-cd801d386499')
 //        checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[credentialsId: 'cf40d121-9530-4f0a-bfe4-cd801d386499', url: 'https://github.com/WishNoBugs/testspr.git']]])
         }
       }
